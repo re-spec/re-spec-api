@@ -3,11 +3,10 @@ server:
 
 spring:
   datasource:
-    somedb:
-      jdbc-url: jdbc:mysql://211.53.209.172:3306/respec?useUnicode=yes&characterEncoding=UTF-8
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      username: respec
-      password: secret
+    url: jdbc:mysql://211.53.209.172:3306/respec?useUnicode=yes&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: respec
+    password: secret
 
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
