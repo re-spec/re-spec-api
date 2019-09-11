@@ -23,7 +23,6 @@ public class UserRepositoryTests {
     public void loadUser() {
         //given
         userRepository.save(User.builder()
-                .idx(1)
                 .age(25)
                 .nickname("닉네임")
                 .salary(10000)
