@@ -36,4 +36,21 @@ public class UserRepositoryTests {
         assertThat(user.getAge(), is(25));
         assertThat(user.getNickname(), is("닉네임"));
     }
+
+    public void deleteUser() {
+        //given
+        userRepository.save(User.builder()
+                .age(25)
+                .nickname("닉네임")
+                .salary(10000)
+                .build());
+
+        //when
+        List<User> userList = userRepository.findAll();
+
+        //then
+        User user = userList.get(0);
+        assertThat(user.getAge(), is(25));
+        assertThat(user.getNickname(), is("닉네임"));
+    }
 }

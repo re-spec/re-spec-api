@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Table(name = "users")
 public class User {
     @Id
-    private int idx;
+    private Long idx;
 
     private String nickname;
 
