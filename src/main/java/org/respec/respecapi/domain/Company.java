@@ -15,7 +15,7 @@ public class Companies {
 
     @ManyToOne
     @JoinColumn(name = "location_idx")
-    private Locations location;
+    private Location location;
 
     @Column(length = 50, nullable = false)
     private String name;
