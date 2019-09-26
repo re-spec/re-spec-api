@@ -20,9 +20,7 @@ public class CompanyForUser {
 
     @ManyToOne
     @JoinColumn(name = "company_idx")
-    private Companies company;
-
-    //private Location location; // 이게 필요한가? companies에 이미 있는 필드
+    private Company company;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date in_date;
