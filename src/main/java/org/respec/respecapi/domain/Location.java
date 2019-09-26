@@ -10,9 +10,9 @@ import java.util.List;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "locations")
-public class Locations {
+public class Location {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idx")
     private Long idx;
 
@@ -20,7 +20,7 @@ public class Locations {
     private String name;
 
     @Builder
-    public Locations(String name){
+    public Location(String name){
         this.name = name;
     }
 }

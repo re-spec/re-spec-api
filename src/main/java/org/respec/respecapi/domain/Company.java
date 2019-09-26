@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "companies")
-public class Companies {
+public class Company {
     @Id
     @GeneratedValue
     private Long idx;
@@ -21,7 +21,8 @@ public class Companies {
     private String name;
 
     @Builder
-    public Companies(String name){
+    public Company(String name, Location location){
         this.name = name;
+        this.location = location;
     }
 }
